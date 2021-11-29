@@ -2,7 +2,8 @@ from typing import Counter, List
 import random
 from datetime import timedelta,datetime
 
-# 1. Faça um Programa que leia 4 notas de alunos e, ao final, mostre na tela as notas lidas e a respectiva média.
+print(f'# 1. Faça um Programa que leia 4 notas de alunos e, ao final, mostre na tela as notas lidas e a respectiva média.')
+
 
 class Alunos:
     def __init__(self, name_student, classroom, time):
@@ -44,7 +45,7 @@ provas2.tests_score(11)
 print(provas2)
 provas2.media()
 
-# 2. Faça um Programa que leia uma string e diga quantas consoantes foram lidas. Imprima as consoantes.
+print(f'# 2. Faça um Programa que leia uma string e diga quantas consoantes foram lidas. Imprima as consoantes.')
 
 class Cont_consoantes:
     def read_Consoant(self, text:str):
@@ -58,8 +59,10 @@ ler_1 = Cont_consoantes()
 print(ler_1.read_Consoant("Faça um Programa que leia uma string e diga quantas consoantes foram lidas. Imprima as consoantes"))
 
 
+print(f'''
 # 3. Faça um Programa que leia 20 números inteiros e armazene-os num vetor. Armazene os números pares no
 # vetor PAR e os números ÍMPARES no vetor ímpar. Imprima os três vetores.
+# ''')
 
 class List_numero:
     def read_number(self, numeros):
@@ -73,8 +76,10 @@ lista de numeros impares encontrados {impar}
 lista1 = List_numero()
 print(lista1.read_number(random.sample(range(0, 1000), 20)))
 
+print(f'''
 # 4. Faça um Programa que peça duas notas de 5 alunos, calcule e armazene num vetor a média de cada aluno,
 # imprima o número de alunos com média maior ou igual a 7.0.
+# ''')
 
 class Alunos_4:
     def __init__(self,name,clasroom,score1,score2):
@@ -121,8 +126,9 @@ aluno_4.add_aluno(aluno_4_E)
 
 print(aluno_4.resumo())
 
+print(f'''
 # 5. Faça um Programa que leia as idades e alturas de 10 alunos e determine quantos alunos com mais de 13 anos
-# possuem altura inferior à média de altura desses alunos.
+# possuem altura inferior à média de altura desses alunos.''')
 
 class Aluno_5:
     def __init__(self,nome,idade,altura):
@@ -183,10 +189,13 @@ print(aluno_5.medias_alturas())
 print(aluno_5.list_medias())
 print(aluno_5.idade_maior())
 
+print(f'''
 # 6. Faça um programa que receba a temperatura média de cada mês do ano e armazene-as em uma lista. Após
 # isto, calcule a média anual das temperaturas e mostre todas as temperaturas acima da média anual, e em que
 # mês elas ocorreram (mostrar o mês por extenso: 1 – Janeiro, 2 – Fevereiro, . . . ).
+''')
 
+'''
 meses = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho', 'Agosto',
 'Setembro','Outubro', 'Novembro','Dezembro']
 temperatura = []
@@ -197,8 +206,9 @@ print(f'A média do ano {media}')
 for i in range(len(temperatura)):
     if temperatura[i] > media:
         print(str( i + 1) + '-' + meses[i] )
-    
+'''    
 
+print(f'''
 # 7. Crie uma classe para representar datas com as seguintes regras:
 # a. deve ter três atributos: o dia, o mês e o ano;
 # b. deve ter um construtor que inicializa os três atributos e verifica a validade dos valores fornecidos;
@@ -206,6 +216,7 @@ for i in range(len(temperatura)):
 # d. forneça o método __str__ para retornar uma representação da data como string. Considere que a data
 # deve ser formatada mostrando o dia, o mês e o ano separados por barra (/);
 # e. forneça uma operação para avançar uma data para o dia seguinte.
+''')
 
 class Data():
     """ def get_datetime():
@@ -234,6 +245,7 @@ data.dia_seguinte()
 print("Dia seguinte = ", data)
 date = Data()
 
+print(f'''
 # 8. Utilizando listas, faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
 # a. "Telefonou para a vítima?"
 # b. "Esteve no local do crime?"
@@ -243,6 +255,7 @@ date = Data()
 # No final, o programa deve emitir uma classificação sobre a participação da pessoa no crime. Se a pessoa
 # responder positivamente a 2 questões ela deve ser classificada como "Suspeita"; entre 3 e 4, como "Cúmplice", e 5 como
 # "Assassino". Caso contrário, ele será classificado como "Inocente".
+''')
 
 def crimePerguntas():
     quantidade_positivo = 0
@@ -266,6 +279,7 @@ def crimePerguntas():
         print("Inocente")
 crimePerguntas()
 
+
 # 9. Faça um programa que leia um número indeterminado de valores, correspondentes a notas, encerrando a
 # entrada de dados quando for informado um valor igual a -1 (que não deve ser armazenado). Após esta entrada
 # de dados, faça:
@@ -278,11 +292,12 @@ crimePerguntas()
 # g. calcule e mostre a quantidade de valores abaixo de sete;
 # h. encerre o programa com uma mensagem.
 
-
+print(f'''
 # 10. Implemente a classe Funcionário com um nome e um salário. Escreva um construtor com dois parâmetros
 # (nome e salário) e métodos para devolver nome e salário. Crie o método aumentar_salario(percentual_aumento)
 # que aumente o salário do funcionário em uma certa porcentagem. Escreva um pequeno programa que teste sua
 # classe.
+''')
 
 class Funcionário:
     def __init__(self, nome, salario):
@@ -307,7 +322,7 @@ funcinario1.aumentar_salario(50)
 
 print(funcinario1)
 
-
+print(f'''
 # 11. Faça um programa completo utilizando classes e métodos que:
 # a. Possua uma classe chamada bombaCombustível, com no mínimo esses atributos:
 # i. tipoCombustivel.
@@ -329,6 +344,7 @@ print(funcinario1)
 
 # c. OBS: Sempre que acontecer um abastecimento é necessário atualizar a quantidade de combustível
 # total na bomba.
+''')
 
 class bombaCombustível:
     def __init__(self, tipoCombustivel, valorLitro, quantidadeCombustivel):
@@ -374,11 +390,12 @@ bomba1.alterarCombustivel(2,"etanol")
 print(30*'-')
 bomba1.abastecerPorValor(50)
 
-
+print(f'''
 # 12. Faça um programa que solicite a data de nascimento (dd/mm/aaaa) do usuário e imprima a data com o nome
 # do mês por extenso.
 # Ex: Data de Nascimento: 29/10/1973
 # Você nasceu em 29 de Outubro de 1973.
+''')
 
 def date_month_year():
     meses = ["Janeiro", "Fevereiro", "Marco", "Abril", "Maio", "Junho", "Julho",
